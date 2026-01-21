@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QR Pro Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+<h2>QR Pro Generator</h2>
+
+<select id="type">
+  <option value="text">Text / Website</option>
+  <option value="whatsapp">WhatsApp</option>
+  <option value="phone">Phone</option>
+</select>
+
+<input id="data" placeholder="Enter data">
+
+<input type="color" id="color" value="#000000">
+
+<select id="size">
+  <option value="200">Small</option>
+  <option value="300" selected>Medium</option>
+  <option value="400">Large</option>
+</select>
+
+<button onclick="createQR()">Generate</button>
+
+<canvas id="qrCanvas"></canvas>
+
+<button onclick="downloadQR()">Download</button>
+
+<h3>History</h3>
+<div id="history"></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+<script src="script.js"></script>
+<footer style="text-align:center; margin-top:20px; font-size:14px; color:#555;">
+  Designed & Developed by 
+  <a href="https://gravatar.com/maazalam04" target="_blank" style="color:#2563eb; text-decoration:none; font-weight:600;">
+    Md Maaz Alam
+  </a>
+</footer>
+  
+</body>
+</html>
